@@ -70,7 +70,7 @@ const BookPage: React.FC<BookPageProps> = ({ page, pageNumber, animationsEnabled
   return (
     <div
       ref={containerRef}
-  className={`w-full h-full max-w-[98vw] sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[55vw] xl:max-w-[40vw] mx-auto bg-white rounded-[8px] sm:rounded-[12px] md:rounded-[18px] shadow-md p-1 sm:p-2 md:p-4 overflow-y-auto smooth-scrollbar ${animationsEnabled ? (flipDirection === 'right' ? 'page-flip-right' : flipDirection === 'left' ? 'page-flip-left' : 'animate-fade-in') : ''}`}
+  className={`w-full min-h-[60vh] h-auto max-h-[90vh] max-w-[98vw] sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[55vw] xl:max-w-[40vw] mx-auto bg-white rounded-[8px] sm:rounded-[12px] md:rounded-[18px] shadow-md p-1 sm:p-2 md:p-4 overflow-y-auto smooth-scrollbar ${animationsEnabled ? (flipDirection === 'right' ? 'page-flip-right' : flipDirection === 'left' ? 'page-flip-left' : 'animate-fade-in') : ''}`}
       style={{ perspective: animationsEnabled ? 1200 : undefined, minHeight: 0 }}
     >
       {getPageComponent()}
