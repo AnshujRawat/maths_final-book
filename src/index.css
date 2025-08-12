@@ -3,26 +3,13 @@
   scroll-behavior: smooth;
 }
 
-/* Slim scrollbar for BookPage */
-.smooth-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  background: #f4f4f4;
-  border-radius: 8px;
-}
-
-.smooth-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(120deg, #b4b4b4 60%, #e0e0e0 100%);
-  border-radius: 8px;
-  min-height: 40px;
-  border: 1px solid #f4f4f4;
-}
-
-.smooth-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(120deg, #a0a0a0 60%, #cccccc 100%);
-}
-
+/* Hide scrollbar for BookPage but keep scroll functionality */
 .smooth-scrollbar {
-  scrollbar-width: thin;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.smooth-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 /* Page flip animation */
 @keyframes page-flip-right {
